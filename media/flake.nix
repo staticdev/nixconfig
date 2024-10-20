@@ -8,6 +8,8 @@
       modules = [ 
         (import "${genericNixConfig}/media/configuration.nix") 
         ./hardware-configuration.nix
+        # based on https://github.com/JupiterBroadcasting/nixconfigs/blob/main/nextcloud.nix
+        ./nextcloud.nix
       ];
     };
   };
