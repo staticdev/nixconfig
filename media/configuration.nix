@@ -10,6 +10,16 @@
       ./hardware-configuration.nix
     ];
 
+  nix.settings = {
+    flake-registry = "";
+    auto-optimise-store = true;
+    tarball-ttl = 0;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
